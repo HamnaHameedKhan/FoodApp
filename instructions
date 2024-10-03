@@ -1,0 +1,68 @@
+Pages and Components:
+1. Home Page (HomePage.js)
+Displays a list of restaurants.
+Fetch restaurant data from the backend and display it using the RestaurantList component.
+2. Login Page (LoginPage.js)
+Form for user login.
+Handles authentication using JWT.
+Use Axios to send login data to the backend.
+3. Register Page (RegisterPage.js)
+Form for user registration.
+Axios POST request to /api/users/register to create a new user.
+4. Restaurant Page (RestaurantPage.js)
+Displays the menu for a specific restaurant.
+Use the MenuItem component to display food items.
+Fetch restaurant and menu details from the backend (e.g., /api/restaurants/:id).
+5. Cart Page (CartPage.js)
+Displays the items in the cart.
+Allows users to add or remove food items.
+Use the Cart component to manage and display selected food items.
+6. Order History Page (OrderHistoryPage.js)
+Displays past orders for the logged-in user.
+Fetch data from the backend /api/orders/user and display in the OrderHistory component.
+Components:
+1. Navbar (Navbar.js)
+A navigation bar with links to Home, Cart, Login, Order History.
+2. Restaurant List (RestaurantList.js)
+Displays a list of restaurants fetched from the backend.
+Each restaurant can be clicked to view its menu.
+3. Menu Item (MenuItem.js)
+Displays each food item with a name, price, and an "Add to Cart" button.
+4. Cart (Cart.js)
+Manages the items the user has selected.
+Displays food items and allows users to increase or decrease quantity.
+5. Order Summary (OrderSummary.js)
+Shows a summary of the order before placing it.
+Allows the user to confirm the order and submit it to the backend.
+6. Order History (OrderHistory.js)
+Displays a list of past orders fetched from the backend for the logged-in user.
+3. Backend Routes
+3.1 User Routes (/routes/users.js)
+POST /api/users/register: Register a new user.
+POST /api/users/login: User login, returns JWT for authentication.
+3.2 Restaurant Routes (/routes/restaurants.js)
+GET /api/restaurants: Get all restaurants.
+GET /api/restaurants/
+: Get menu for a specific restaurant.
+3.3 Order Routes (/routes/orders.js)
+POST /api/orders: Place a new order.
+GET /api/orders/user: Get all orders for a specific user.
+4. Redux Store Setup (Optional)
+Set up Redux to manage global state for the cart and user authentication.
+Actions:
+loginUser, registerUser for authentication.
+fetchRestaurants, fetchMenuItems, addToCart, removeFromCart.
+Reducers:
+authReducer to manage user login state.
+cartReducer to manage food items added to the cart.
+5. Final Steps
+Run the Backend: node server.js
+Run the Frontend: npm start
+Test the app: Ensure that the basic features (login, restaurant view, cart, and order history) are functional.
+Summary of Pages and Components:
+Pages: HomePage, LoginPage, RegisterPage, RestaurantPage, CartPage, OrderHistoryPage.
+Components: Navbar, RestaurantList, MenuItem, Cart, OrderSummary, OrderHistory.
+This project can take 2–3 weeks depending on complexity and additional features. You can also expand the app by adding real-time updates, payment integration, or admin panels for restaurants.
+
+
+https://jevelin.shufflehound.com/burger-shop/
